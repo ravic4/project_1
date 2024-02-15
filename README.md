@@ -37,7 +37,7 @@ The code concatenates all the assets dataframes (for Prices and Daily returns) b
 ###Data Analysis and further cleaning###
 We visualize the Effective Fed Fund Rate plot to determine historical dates that explain the changes and overall trend.  We also Draw the assets returns against the EFFR to discover if high periods of volatility are similar to periods where the EFFR changed from 2019 to 2023.
 
-![EFFR Rate between 2019 to 2023]("./UCB_FinTech/Project_1/Images/EFFR_RATE.png")
+![EFFR Rate between 2019 to 2023]("/../UCB_FinTech/Project_1/Images/EFFR_RATE.png")
 
 #### EFFR A timeline of the Fed's interest rate hikes 2022–2023####
 March-2020: Fed takes action as a response of COVID impact in the U>S Market as a global pandemic.  The Fed Fund rate is reduced gradually from approximately 1.75% to 0% this month. Dow falls 37%
