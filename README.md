@@ -20,7 +20,7 @@ The following are some of the expected behaviors of different assets with a Fed 
 Stocks: When the Fed raises rates, the cost of borrowing increases consumers and businesses which translates in higher costs and cutbacks on capital expenditures and lower profits which would lead to reduced stock prices. However, equity investors may also still welcome a Fed Rate hike if it’s meant to combat the strong headwind of rising inflation.
 Bonds: The market values of bonds typically decline as rates go up and vice versa.  This is especially true for short maturity treasury Bonds.  
 Crypto:  Although Crypto investors see a safe haven in crypto in times of U.S market Volatility, low rates, or anything that ails the U.S economic performance. In general, high interest rates scare investors away from riskier investments like crypto, and the lowering of rates will be seen as a positive by the crypto investor community.”  It is used as a store of value, medium of exchange, and hedge against inflation, providing users with complete financial autonomy.(1)(5)
-##Python Libraries, Data import and Cleaning##
+## Python Libraries, Data import and Cleaning ##
 
 ### Libraries ###
 The python code in our Jupyter notebook starts by importing all the libraries to be used for our Financial Analysis tool. Please note that besides the regular libraries used so far, we have added a new library, sklearn.linear_model,  to be used  for our linear regression calculation.
@@ -32,12 +32,12 @@ A blank dataframe is created where all 3 assets are then concatenated and settin
 2.  BITCOIN: (Crypto) Data is obtained for the date range  using the .env and CoinGecko API object
 3. FGRTX (Balanced Mutual Fund 50% Stocks and 50%S-T and Bonds) and EFFR (Effective Fed Fund Rate): Data obtained through downloaded CSV files from  https://finance.yahoo.com/quote/FGRTX/history/ and https://www.newyorkfed.org/markets/reference-rates/effr .  For EFFR, the rate are presented as changed from the percent nomenclature to their decimal equivalent.(2)(3)
 The code creates a  csvpath to read the files, sort by date (ascending), convert the date into datetime, drop unnecessary columns, count and drop nulls and then recheck if any nulls remain.  The code also checks the data types to make sure they are a float as numerical calculations will be based on the data.
-###Data Concatenation###
+### Data Concatenation ###
 The code concatenates all the assets dataframes (for Prices and Daily returns) by setting the time as index for all. 
-###Data Analysis and further cleaning###
+## #Data Analysis and further cleaning ###
 We visualize the Effective Fed Fund Rate plot to determine historical dates that explain the changes and overall trend.  We also Draw the assets returns against the EFFR to discover if high periods of volatility are similar to periods where the EFFR changed from 2019 to 2023.
 
-![EFFR Rate between 2019 to 2023]("/Images/EFFR_RATE.png")
+![EFFR Rate between 2019 to 2023]("./Images/EFFR_RATE.png")
 
 #### EFFR A timeline of the Fed's interest rate hikes 2022–2023####
 March-2020: Fed takes action as a response of COVID impact in the U>S Market as a global pandemic.  The Fed Fund rate is reduced gradually from approximately 1.75% to 0% this month. Dow falls 37%
@@ -57,7 +57,7 @@ BTC      0.038438
 We determine that the balanced portfolio FGRTX appears to have almost an  identical risk as the SP500 and that Bitcoin is the riskiest of all assets. 
 The python code we use will then calculate and Plot the correlation
 
-![Heatmap Correlation]["/Images/heatmap seaborne.png"]
+![Heatmap Correlation]["./Images/heatmap seaborne.png"]
 
 All assets we evaluated have a positive correlation with the SP500. The balanced Mutual Fund FGRTX has a high correlation with the SP500 and a significant one with the bond portfolio IWM. FGRTX and IWM also have a significant correlation. Bitcoin has the least correlation with all other assets and the SP500.
 
@@ -103,7 +103,7 @@ Although BTC appears to have the better Treynor ratio by far, it is only one ass
 ![Treynor Ratio of Asset Classes]["/Images/Treynor_Ratio_Asset.png"]
 
 
-###Sharpe Ratio###
+### Sharpe Ratio ###
 We then  calculate the Sharpe ratio, by assuming a 0 risk-free rate from the portfolio’s rate of return.  Then, they divide the result by the standard deviation of the portfolio’s excess return.
 The Sharpe ratio can be helpful only when used to compare very similar investments, like mutual funds and ETFs that track the same underlying index. Still, investors should keep in mind that those investments with a higher Sharpe ratio can be more volatile than those with a lower rate. (investopedia)
 ARKK     0.298479
