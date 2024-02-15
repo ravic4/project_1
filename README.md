@@ -134,7 +134,6 @@ The Fed Fund rate does not have a significant as a standalone metric, howeover, 
 * What trading strategy can be employed from looking at company fundamentals and valuation? Are there other appropriate benchmarks other than the S&P 500 in a more tech-centric world. 
 
 
-
 ### Resources ###
 1.https://www.bankrate.com/investing/federal-reserve-impact-on-stocks-crypto-other-investments
 2.https://finance.yahoo.com/quote/FGRTX/history/  
@@ -149,11 +148,7 @@ The Fed Fund rate does not have a significant as a standalone metric, howeover, 
 11.Python Tutor: Edward Rees: https://www.edwardrees.info/
 12.https://stackoverflow.com/questions/35432378/python-reshape-list-to-ndim-array 
 13.https://hvplot.holoviz.org
-
-
-
-
-
+14.https://www.coingecko.com/en/api
 
 
 
