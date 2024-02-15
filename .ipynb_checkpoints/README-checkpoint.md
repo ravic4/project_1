@@ -37,7 +37,7 @@ The code concatenates all the assets dataframes (for Prices and Daily returns) b
 ###Data Analysis and further cleaning###
 We visualize the Effective Fed Fund Rate plot to determine historical dates that explain the changes and overall trend.  We also Draw the assets returns against the EFFR to discover if high periods of volatility are similar to periods where the EFFR changed from 2019 to 2023.
 
-![EFFR Rate between 2019 to 2023]("/../UCB_FinTech/Project_1/Images/EFFR_RATE.png")
+![EFFR Rate between 2019 to 2023]("/Images/EFFR_RATE.png")
 
 #### EFFR A timeline of the Fed's interest rate hikes 2022–2023####
 March-2020: Fed takes action as a response of COVID impact in the U>S Market as a global pandemic.  The Fed Fund rate is reduced gradually from approximately 1.75% to 0% this month. Dow falls 37%
@@ -57,13 +57,13 @@ BTC      0.038438
 We determine that the balanced portfolio FGRTX appears to have almost an  identical risk as the SP500 and that Bitcoin is the riskiest of all assets. 
 The python code we use will then calculate and Plot the correlation
 
-![Heatmap Correlation]["/UCB_FinTech/Project_1/Images/heatmap seaborne.png"]
+![Heatmap Correlation]["/Images/heatmap seaborne.png"]
 
 All assets we evaluated have a positive correlation with the SP500. The balanced Mutual Fund FGRTX has a high correlation with the SP500 and a significant one with the bond portfolio IWM. FGRTX and IWM also have a significant correlation. Bitcoin has the least correlation with all other assets and the SP500.
 
 To further understand the relationship between he assets, the code also  calculates and visualizes the rolling standard deviation for all portfolios using a 30-day window
 
-![Rolling Standard Deviation]["/UCB_FinTech/Project_1/Images/Rolling_STD_30_Day.png"]
+![Rolling Standard Deviation]["/Images/Rolling_STD_30_Day.png"]
 
 Bitcoin has the biggest fluctuations, ARKK appears to have periods of high and low  STD.  FGRTX and  IWM appear to behave closest to the  SP500.
 
@@ -74,7 +74,7 @@ IWM Beta: 1.1301737359320354
 BTC Beta: 0.9428292586449628 
 Our analysis tool  next calculated and visualized  the rolling beta for 60 days:
 
-![Rolling Beta for 60 days]["/UCB_FinTech/Project_1/Images/All_asset_portfolio_beta.png"]
+![Rolling Beta for 60 days]["/Images/All_asset_portfolio_beta.png"]
 Beta determines the correlation between asset classes and the market (S&P500). FGRTX follows the S&P500 the most, ARKK and BTC are more outliers.
 
 ## Linear Regression using the SKLR library ##
@@ -82,12 +82,12 @@ Beta determines the correlation between asset classes and the market (S&P500). F
  
 The Linear Regression bar chart above is the Linear Regression  between the S&P 500 against the other assets. The library used was the SKLearn. To obtain the data, we took in the original data frame that contained the daily returns of all assets, converted the column heads into .numpy and reshaped the array into a (-1,1). The (-1,1) allows the data to be converted into 2-dimensions to prepare it for Linear Regression. Once completed, we call in the LinearRegression().fit() functions to obtain the R2 Linear Regression. To compare the two variables the following line of code was called (example only):
 Linear_regression = LinearRegression().fit(main, compare) 
-![Linear Regression SPY]["/UCB_FinTech/Project_1/Images/Linear_regression_SPY.png"]
+![Linear Regression SPY]["/Images/Linear_regression_SPY.png"]
 ### Linear Regression comparing the Fed Fund rate to other asset classes 
 ![Linear Regression Fed Fund Rate]["UCB_FinTech/Project_1/Images/Linear_regression_SPY.png"]
 Above is the correlation between the Fed-Fund rate vs. all other asset classes for over 1200 trading days. 
 
-![EFFR vs. Asset]["/UCB_FinTech/Project_1/Images/Linear_regression_FED.png"]
+![EFFR vs. Asset]["/Images/Linear_regression_FED.png"]
 ## Treynor Measure Ratio= (PR−RFR) β##
 Our code will calculate and bar plot the Treynor Ratio ​where:
 PR=portfolio return
@@ -100,7 +100,7 @@ IWM Treynor Ratio: 0.060960583345678186
 BTC Treynor Ratio: 0.6042496262784204
 Although BTC appears to have the better Treynor ratio by far, it is only one asset and is not diversified.  Next would  FGRTX which is already a diversified mutual fund portfolio and appears to be the best choice. (6)
 
-![Treynor Ratio of Asset Classes]["UCB_FinTech/Project_1/Images/Treynor_Ratio_Asset.png"]
+![Treynor Ratio of Asset Classes]["/Images/Treynor_Ratio_Asset.png"]
 
 
 ###Sharpe Ratio###
@@ -113,7 +113,7 @@ FGRTX    0.739702
 BTC      0.964063
 BTC although having the highest sharpe ratio, investors may need to consider its high volatility. Surprisingly, FGRTX has a higher ratio than SP500.  The lowest Sharpe ratio is for ARKK.(6)
 
-![Asset Classes Sharpe Ratio]["/UCB_FinTech/Project_1/Images/Sharpe_ratio_.png"]
+![Asset Classes Sharpe Ratio]["/Images/Sharpe_ratio_.png"]
 
 ### Conclusion & Answering Research Question ### 
 * How asset classes perform during shrinking or expanding money supply through fed-fund rate?
