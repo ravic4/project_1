@@ -32,12 +32,16 @@ A blank dataframe is created where all 3 assets are then concatenated and settin
 2.  BITCOIN: (Crypto) Data is obtained for the date range  using the .env and CoinGecko API object
 3. FGRTX (Balanced Mutual Fund 50% Stocks and 50%S-T and Bonds) and EFFR (Effective Fed Fund Rate): Data obtained through downloaded CSV files from  https://finance.yahoo.com/quote/FGRTX/history/ and https://www.newyorkfed.org/markets/reference-rates/effr .  For EFFR, the rate are presented as changed from the percent nomenclature to their decimal equivalent.(2)(3)
 The code creates a  csvpath to read the files, sort by date (ascending), convert the date into datetime, drop unnecessary columns, count and drop nulls and then recheck if any nulls remain.  The code also checks the data types to make sure they are a float as numerical calculations will be based on the data.
+
 ### Data Concatenation ###
 The code concatenates all the assets dataframes (for Prices and Daily returns) by setting the time as index for all. 
 ## #Data Analysis and further cleaning ###
 We visualize the Effective Fed Fund Rate plot to determine historical dates that explain the changes and overall trend.  We also Draw the assets returns against the EFFR to discover if high periods of volatility are similar to periods where the EFFR changed from 2019 to 2023.
 
-![EFFR Rate between 2019 to 2023]("./Images/EFFR_RATE.png")
+![EFFR Rate between 2019 to 2023]("https://github.com/ravic4/project_1/blob/main/Images/EFFR_RATE.png")
+
+![alt text](http://github.com/ravic4/project_1/blob/main/Images/EFFR_RATE.png/to/img.png)
+
 
 #### EFFR A timeline of the Fed's interest rate hikes 2022–2023####
 March-2020: Fed takes action as a response of COVID impact in the U>S Market as a global pandemic.  The Fed Fund rate is reduced gradually from approximately 1.75% to 0% this month. Dow falls 37%
