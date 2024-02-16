@@ -35,14 +35,12 @@ The code creates a  csvpath to read the files, sort by date (ascending), convert
 
 ### Data Concatenation ###
 The code concatenates all the assets dataframes (for Prices and Daily returns) by setting the time as index for all. 
-## #Data Analysis and further cleaning ###
+### Data Analysis and further cleaning ###
 We visualize the Effective Fed Fund Rate plot to determine historical dates that explain the changes and overall trend.  We also Draw the assets returns against the EFFR to discover if high periods of volatility are similar to periods where the EFFR changed from 2019 to 2023.
 
-
-![EFFR Rate between 2019 to 2023](http://github.com/ravic4/project_1/blob/main/Images/EFFR_RATE.png/to/img.png)
 <img src="/Images/EFFR_RATE.png" width="500"/>
 
-#### EFFR A timeline of the Fed's interest rate hikes 2022–2023####
+#### EFFR: A timeline of the Fed's interest rate hikes 2022–2023 ####
 March-2020: Fed takes action as a response of COVID impact in the U>S Market as a global pandemic.  The Fed Fund rate is reduced gradually from approximately 1.75% to 0% this month. Dow falls 37%
 April-2020: Unemployment reaches 14.7%
 July 2021: Rates maintained at 0 with some inflation present.
@@ -60,13 +58,13 @@ BTC      0.038438
 We determine that the balanced portfolio FGRTX appears to have almost an  identical risk as the SP500 and that Bitcoin is the riskiest of all assets. 
 The python code we use will then calculate and Plot the correlation
 
-![Heatmap Correlation]["./Images/heatmap seaborne.png"]
+<img src="/Images/heatmap seaborne.png" width="500"/>
 
 All assets we evaluated have a positive correlation with the SP500. The balanced Mutual Fund FGRTX has a high correlation with the SP500 and a significant one with the bond portfolio IWM. FGRTX and IWM also have a significant correlation. Bitcoin has the least correlation with all other assets and the SP500.
 
 To further understand the relationship between he assets, the code also  calculates and visualizes the rolling standard deviation for all portfolios using a 30-day window
 
-![Rolling Standard Deviation]["/Images/Rolling_STD_30_Day.png"]
+<img src = "/Images/Rolling_STD_30_Day.png" width = "500"/>
 
 Bitcoin has the biggest fluctuations, ARKK appears to have periods of high and low  STD.  FGRTX and  IWM appear to behave closest to the  SP500.
 
@@ -77,21 +75,24 @@ IWM Beta: 1.1301737359320354
 BTC Beta: 0.9428292586449628 
 Our analysis tool  next calculated and visualized  the rolling beta for 60 days:
 
-![Rolling Beta for 60 days]["/Images/All_asset_portfolio_beta.png"]
+<img src="/Images/All_asset_portfolio_beta.png" width="500"/>
+
 Beta determines the correlation between asset classes and the market (S&P500). FGRTX follows the S&P500 the most, ARKK and BTC are more outliers.
 
 ## Linear Regression using the SKLR library ##
-### Linear Regression comparing the S&P500 to other asset classes
+### Linear Regression comparing the S&P500 to other asset classes ##
  
 The Linear Regression bar chart above is the Linear Regression  between the S&P 500 against the other assets. The library used was the SKLearn. To obtain the data, we took in the original data frame that contained the daily returns of all assets, converted the column heads into .numpy and reshaped the array into a (-1,1). The (-1,1) allows the data to be converted into 2-dimensions to prepare it for Linear Regression. Once completed, we call in the LinearRegression().fit() functions to obtain the R2 Linear Regression. To compare the two variables the following line of code was called (example only):
 Linear_regression = LinearRegression().fit(main, compare) 
-![Linear Regression SPY]["/Images/Linear_regression_SPY.png"]
+
+<img src="/Images/Linear_regression_SPY.png" width="500"/>
+
 ### Linear Regression comparing the Fed Fund rate to other asset classes 
-![Linear Regression Fed Fund Rate]["UCB_FinTech/Project_1/Images/Linear_regression_SPY.png"]
+
+<img src="/Images/Linear_regression_FED.png" width="500"/>
 Above is the correlation between the Fed-Fund rate vs. all other asset classes for over 1200 trading days. 
 
-![EFFR vs. Asset]["/Images/Linear_regression_FED.png"]
-## Treynor Measure Ratio= (PR−RFR) β##
+## Treynor Measure Ratio= (PR−RFR) β ##
 Our code will calculate and bar plot the Treynor Ratio ​where:
 PR=portfolio return
 RFR=risk-free rate (EFFR for as the proxy for our calculation for the 2019-2023)
@@ -103,8 +104,8 @@ IWM Treynor Ratio: 0.060960583345678186
 BTC Treynor Ratio: 0.6042496262784204
 Although BTC appears to have the better Treynor ratio by far, it is only one asset and is not diversified.  Next would  FGRTX which is already a diversified mutual fund portfolio and appears to be the best choice. (6)
 
-![Treynor Ratio of Asset Classes]["/Images/Treynor_Ratio_Asset.png"]
 
+<img src="/Images/Treynor_Ratio_Asset.png" width="500"/>
 
 ### Sharpe Ratio ###
 We then  calculate the Sharpe ratio, by assuming a 0 risk-free rate from the portfolio’s rate of return.  Then, they divide the result by the standard deviation of the portfolio’s excess return.
@@ -116,7 +117,7 @@ FGRTX    0.739702
 BTC      0.964063
 BTC although having the highest sharpe ratio, investors may need to consider its high volatility. Surprisingly, FGRTX has a higher ratio than SP500.  The lowest Sharpe ratio is for ARKK.(6)
 
-![Asset Classes Sharpe Ratio]["/Images/Sharpe_ratio_.png"]
+<img src="/Images/Sharpe_ratio_.png" width="500"/>
 
 ### Conclusion & Answering Research Question ### 
 * How asset classes perform during shrinking or expanding money supply through fed-fund rate?
@@ -130,6 +131,8 @@ In periods where the federal reserve announces a rate hike, asset class prices c
 * Does the fed fund rate have a significant impact to be considered when building a portfolio?
 
 The Fed Fund rate does not have a significant as a standalone metric, howeover, when used with other formulas such as Sharpe Ratio (where the Risk-Free Rate is used), the Fed Fund Rate is appropriate. 
+
+To conclude, the Fed Fund rate can be used to accompany other financial ratios such as the Treynor Ratio, however, more work could be needed to understand the functions of the Fed Fund Rate.
 
 ### Future Questions to Ask ### 
 * What forecasting modelling would fit to determine future performance of these assets? 
